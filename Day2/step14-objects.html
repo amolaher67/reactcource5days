@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      //different ways to create object
+     // let hero1 = {};
+     // let hero2 = new Object();
+       'use strict'
+     /*  let hero = Object.create(null);
+       //Immutable
+       Object.defineProperty(hero, "title", { value: "IronMan" });
+       console.log(hero.title); //"IronMan"
+       hero.title= "Joker" // this value will not change as objecr is immutable
+       console.log(hero.title)//"IronMan"
+
+
+      //Mutbale
+      let hero2 = Object.create(null);
+      
+      Object.defineProperty(hero2, "title", { value: "IronMan",writable:true });
+      console.log(hero2.title); //"IronMan"
+      hero2.title= "Joker" // Writbale is allowed to change now
+      console.log(hero2.title)//"Joker"
+
+
+
+      //set definproperty again using configurable option
+      let hero3 = Object.create(null);
+      
+      Object.defineProperty(hero3, "title", { value: "IronMan",writable:true,configurable:true });
+      console.log(hero3.title); //"IronMan"
+      hero3.title= "Joker" // Writbale is allowed to change now
+      console.log(hero3.title)//"Joker"
+      
+      //we will not allowed to do this when configurable true
+      Object.defineProperty(hero3, "title", {writable:true});
+      console.log(hero3.title); //"IronMan"
+    */
+
+     let hero4= Object.create(null);
+     Object.defineProperty(hero4,'title',{
+         value:"Ironman",
+         writable:true,
+         configurable:true, //this will allow us to reconfigure the title property again
+         enumerable:true
+     });
+
+     Object.defineProperty(hero4,'city',{
+         value:'New York',
+         enumerable:true //this will allowe to enable to iterate usinf for in
+     });
+
+     for(const property1 in hero4)
+     {
+        console.log(`${property1}: ${hero4[property1]}`);
+     }
+
+
+   
+
+
+    </script>
+  </head>
+  <body></body>
+</html>

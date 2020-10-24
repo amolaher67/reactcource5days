@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        'use strict'
+
+         function Employee(Name, Age)
+         {
+           var _name= Name;
+           var _age = Age;
+
+           Object.defineProperty(this,"Age",
+           {
+              get : function(){ return _age;},
+              set : function(value){
+                       if(value<0) { alert ('Invalid Age');}
+                       else
+                       _age = value;
+              }
+           });
+
+           //read only property
+
+           Object.defineProperty(this,"Name",
+           {
+             get : function(){ return _age; }
+           });
+        }
+
+       var emp = new Employee("Amol",28);
+       emp.Age = 50; //-- work
+       //emp.Name="Aher" //--will not work
+    </script>
+  </body>
+</html>

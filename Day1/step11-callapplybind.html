@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+
+
+ let ironMan= {
+     title:"IronMan",
+     firstName:"Tony",
+     lastName:"Stark",
+     fullname:function(city="Not City provided"){
+         return this.firstName + " " + this.lastName+"is from "+city;
+     }
+     
+ }
+
+ let SpiderMan= {
+     title:"SpiderMan",
+     firstName:"Peter",
+     lastName:"Park"  
+ }
+
+ let captainAmerica= {
+     title:"captainAmerica",
+     firstName:"Steve",
+     lastName:"Rogers"  
+ }
+
+ console.log(ironMan.fullname());
+ console.log(ironMan.fullname.call(SpiderMan)); //executed function with diferent contect , this will in spiderMan here
+ console.log(ironMan.fullname.call(captainAmerica));
+
+
+  console.log(ironMan.fullname.apply(SpiderMan)); //executed function with diferent contect , this will in spiderMan here
+  console.log(ironMan.fullname.apply(captainAmerica));
+
+
+// dif call and apply - how do we pass parameter to function, in case of call we just sent that
+//value and in case of apply we have to send array of values
+
+console.log(ironMan.fullname.call(captainAmerica,"New York"));
+console.log(ironMan.fullname.apply(captainAmerica,["Banathm"]));
+
+//bind
+
+changedContext = ironMan.fullname.bind(captainAmerica);
+console.log(changedContext("New York"));//if any paranetrer send when we call here
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

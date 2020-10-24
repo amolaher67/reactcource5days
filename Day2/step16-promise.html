@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        const promise = new Promise(function (resolve, reject) {
+          setTimeout(function () {
+            if (true) {
+              resolve("Success resolve");
+            } else {
+              reject("Error Rejected");
+            }
+          }, 2000);
+        });
+
+        promise.then(
+          function (success) {
+            console.log(success);
+            return "modified " + success;
+          },
+          function (error) {
+            console.log(error);
+          }
+        ).then(function(successMessage){
+           console.log(success);
+        }).catch(function(error){
+          console.log(error);
+        });
+
+      const promiseA = new Promise((resolutionFunc, rejectionFunc) => {
+        resolutionFunc(777);
+      });
+      // At this point, "promiseA" is already settled.
+      promiseA.then((val) => console.log("asynchronous logging has val:", val));
+      console.log("immediate logging");
+      
+    </script>
+  </body>
+</html>

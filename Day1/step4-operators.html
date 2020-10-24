@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button attr="SortByPower">Sort Power</button>
+    <button attr="SortByMovies">Sort Movies</button>
+    <script>
+        // var arr = [5,3,1,2,4,11,21,34];
+
+        //compareFunction
+        // function SortMe(arg1,arg2)
+        // {
+        //     if(arg1>arg2)
+        //     {
+        //         return 1;
+        //     }
+        //     else if(arg1<arg2)
+        //     {
+        //         return -1;
+        //     }
+        //     else
+        //     {
+        //         return 0
+        //     }
+        // }
+        // console.log(arr.sort(SortMe));
+
+        var arr = [
+
+        {title:"Thor",power:10,movies:2},
+        {title:"Shaktiman",power:2,movies:12},
+        {title:"Batman",power:6,movies:23},
+        {title:"SuperMan",power:9,movies:27},
+        
+        ]
+
+        //compareFunction
+        function SortByPower(arg1,arg2)
+        {
+            if(arg1.power>arg2.power)
+            {
+                return 1;
+            }
+            else if(arg1.power<arg2.power)
+            {
+                return -1;
+            }
+            else
+            {
+                return 0
+            }
+        }
+
+        function SortByMovies(arg1,arg2)
+        {
+            if(arg1.movies>arg2.movies)
+            {
+                return 1;
+            }
+            else if(arg1.movies<arg2.movies)
+            {
+                return -1;
+            }
+            else
+            {
+                return 0
+            }
+        }
+
+        //console.log(arr.sort(SortByPower));
+
+        document.addEventListener("DOMContentLoaded", function(){
+            document.getElementsByTagName("button")[0].addEventListener("click", commonFun);
+            document.getElementsByTagName("button")[1].addEventListener("click", commonFun);
+         })
+ 
+         function commonFun(evt){
+           var fun = evt.target.getAttribute('attr');
+           console.log(arr.sort( window[fun] ));
+         }
+
+
+    </script>
+</body>
+</html>

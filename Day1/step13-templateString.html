@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 220px;
+        height: 200px;
+        padding: 10px;
+        float: left;
+        margin: 10px;
+        background-color: midnightblue;
+        color: moccasin;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+      }
+    </style>
+    <script>
+      var heroeslist = [
+        {
+          title: "Ironman",
+          power: 7,
+          fname: "Tony",
+          lname: "Stark",
+          city: "New York",
+        },
+        {
+          title: "Batman",
+          power: 8,
+          fname: "Bruce",
+          lname: "Wayne",
+          city: "Gotham",
+        },
+        {
+          title: "Superman",
+          power: 9,
+          fname: "Clark",
+          lname: "Kent",
+          city: "Metropolis",
+        },
+        {
+          title: "Rajanikanth",
+          power: 10,
+          fname: "Shivaji",
+          lname: "Gayakwad",
+          city: "Solapur",
+        },
+      ];
+
+      document.addEventListener("DOMContentLoaded", function () {
+        for (let i = 0; i < heroeslist.length; i++) {
+          let element = `
+         <div class='box'>
+            <h1>${heroeslist[i].title}</h1>
+            <h2>${heroeslist[i].fname + " " + heroeslist[i].lname}</h2>
+            <input type="range" value="${
+              heroeslist[i].power
+            }" min="1" max="10" disabled>
+            <h3>${heroeslist[i].city}</h3>
+         </div> `;
+
+          document.getElementsByClassName("container")[0].innerHTML += element;
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container"></div>
+  </body>
+</html>

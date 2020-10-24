@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      let asyncCall2 = function () {
+        let promise = new Promise(function (resolve, reject) {
+          setTimeout(function () {
+            if (false) {
+              resolve("Second Resolve Data");
+            } else {
+              reject("Second Reject Error Data");
+            }
+          }, 2000);
+        });
+
+        return promise;
+      };
+
+      let asyncCall1 = function () {
+        let promise = new Promise(function (resolve, reject) {
+          setTimeout(function () {
+            if (true) {
+              resolve("first respnse");
+            } else {
+                reject("First Reject Error Data");
+            }
+          }, 2000);
+        });
+
+        return promise;
+      };
+
+
+     //wait for both of this response to resolve
+     Promise.all([asyncCall1(),asyncCall2()]).then(function(dataresponsearray){
+       console.log(dataresponsearray)
+     }).catch(function(error){
+        console.log(error)
+     });
+
+    //whichever first get resolve get return as result
+    Promise.race([asyncCall1(),asyncCall2()]).then(function(dataresponsearray){
+       console.log(dataresponsearray)
+     }).catch(function(error){
+        console.log(error)
+     });
+
+     Promise.allSettled([asyncCall1(),asyncCall2()]).then(function(dataresponsearray){
+       console.log(dataresponsearray)
+     }).catch(function(error){
+        console.log(error)
+     });
+    </script>
+  </head>
+  <body></body>
+</html>

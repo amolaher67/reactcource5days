@@ -1,0 +1,15 @@
+html:5 - generate html template using emmet extension
+
+EventListener are better approch rather than using inlcik event.
+in this case we have opportunity to remove that event,inline events has no way to remove 
+
+sequece of execution - 
+
+Dom on load
+window onload
+body onload
+
+
+defer - delay loading javascript
+async - async 
+

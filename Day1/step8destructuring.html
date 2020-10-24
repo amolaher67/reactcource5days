@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+          let hero = {
+                  title : "Ironman",
+                  power : 7,
+                  city : "New York"
+              };
+              console.log(hero.title);
+              let comichero = hero;//object reference
+              console.log(comichero.title);
+              comichero.title = "Captain america";
+              console.log(comichero.title);// Captian America
+              console.log(hero.title);// Captain America
+
+              //destructuring
+
+              //old way
+             // let htitle=hero.title,hpower=hero.power,hcity=hero.city;
+
+              //new way
+
+              let {title,city,power} = hero;
+              console.log(title,city,power);
+
+             function giveHero()
+              {
+                  return  {
+                  title : "Ironman",
+                  power : 7,
+                  city : "New York"
+                  };            
+              }
+              let {title,city,power} = giveHero();
+              console.log(title,city,power);
+
+    </script>
+  </head>
+  <body></body>
+</html>

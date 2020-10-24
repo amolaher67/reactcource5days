@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+           //when we convert sellingPrice as arrow function this functin get called
+           //because context of that function will be window
+            function costPrice (){
+                return 200
+            }
+
+        var cart = {
+            costPrice : function(){
+                return 100
+            },
+            sellingPrice : function(){
+
+                let calculateProfit = function(){
+                    return this.costPrice() * 0.2
+                }
+
+               //we can use call and apply and bind to bind this context
+               // return this.costPrice() + calculateProfit.apply(this);
+               // return this.costPrice() + calculateProfit.call(this);
+               //we can use arrow function 
+               //whenewher we are using fat arrow function javascript uses it parent context for execution
+               // if we convert sellingPrise to arrow function that its contect will be window
+                return this.costPrice() + calculateProfit.bind(this)();
+            }
+        };
+        console.log(cart.sellingPrice());// 120 
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

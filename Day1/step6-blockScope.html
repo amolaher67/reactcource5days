@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      var hero = {
+        title: "IronMan",
+        power: 6,
+      };
+      function changeTitle() {
+        if (hero.power > 5) {
+          //var temptitle = hero.title + "is Storng";
+          let temptitle = hero.title + "is Storng";
+          hero.title= temptitle;
+        }
+        console.log(temptitle);//temptitle is accessible here due to varibale hoisting
+        //its currently var so voisted to litle up and javascript internally declare temptitle =undefined
+        // and then it should be accessible throght the function.
+        //if we use let - it will only accessible to that if scope and not throught the object
+      }
+      changeTitle();
+      console.log(hero.title);
+     
+    </script>
+  </head>
+  <body></body>
+</html>

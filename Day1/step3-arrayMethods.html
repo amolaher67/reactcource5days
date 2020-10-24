@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    var arr= [3,2,4234,23,423,42,34,23,41,23,234,23,423];
+
+    //foreach
+    arr.forEach(function(val,index,arr){
+      console.log(val)
+    });
+
+    //map
+    var double = arr.map(function(val, idx, arr){
+        return val * 2;
+     });
+     console.log(arr);
+     console.log(double);
+
+     var lessthan10 = arr.filter(function(val, idx, arr){
+        return val < 10;
+     });
+    
+     console.log(arr);
+     console.log(lessthan10);
+
+     var tot = arr.reduce(function(iv, val, idx, arr){
+        return val + iv;
+     }, 0);
+     console.log(tot);
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

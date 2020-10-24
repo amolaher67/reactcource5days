@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <script type="module"> 
+  
+    //type module allowed to loaded here - and it will only work when we use server
+    import { ComicHero } from "./classes/comicHero.js";
+    let comicHero = new ComicHero("Amol", "Aher", 103);
+    console.log(comicHero.getFullName(), comicHero.sayCount());
+  </script>
+  <body>
+    <h1>Hello From Classes File</h1>
+  </body>
+</html>

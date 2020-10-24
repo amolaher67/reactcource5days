@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+
+</head>
+<body>
+    <button id="myBtn">Click ME</button>
+    <button id="myBtn2">Click ME2</button>
+    <h1>Number is:<span id="log"/></h1>
+    <script> 
+        function init()
+        {
+            document.getElementById("myBtn").addEventListener("click", changeHandler);
+            document.getElementById("myBtn2").addEventListener("click", changeHandler);
+        }  
+        document.addEventListener("DOMContentLoaded",init);
+
+        function changeHandler()
+        {
+            document.getElementById("log").innerText= Math.random();
+        }                
+        
+        document.getElementById("myBtn2").addEventListener("click", function() 
+            {
+                 document.getElementById("myBtn").removeEventListener("click",changeHandler)
+            });
+       </script>
+</body>
+</html>

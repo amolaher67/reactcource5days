@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+
+/*
+  
+
+//function declaration
+function adder(num1,num2) {
+    return num1+num2;
+}
+
+//function expression - this one get hoisted let addder get hoisted at top of the function
+let adder =function(num1,num2)
+{
+    return num1+num2;
+}
+*/
+//simple arrow function
+let adder1 = (num1,num2)=>
+{
+    return num1+num2;
+}
+
+let adder2= (num1,num2)=> num1+num2; //no return statement required as its signle line of code
+let adder3 = num1 => num1+1; // no bracets required as  its signle paraneter
+
+console.log(adder1(1,3))
+console.log(adder2(1,3))
+console.log(adder3(1))
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>
