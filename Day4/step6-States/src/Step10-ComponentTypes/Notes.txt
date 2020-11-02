@@ -1,0 +1,10 @@
+Pure Component - 
+
+in normal Component we render child Component even if change parent Component
+.if no changes in child then why we need to render again so handle lifecycle event of shouldComporender and check 
+values are changed for child if changed then true otherwise return false
+
+we extends Component from PureComponent
+pure Component has shallow comparision
+
+

@@ -1,0 +1,40 @@
+.box {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: gray;
+  width: 800px;
+  height: 250px;
+  
+}
+
+.box h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+
+.box label {
+  width: 100px;
+  display: inline-block;
+  text-align: right;
+  padding-right: 5px;
+  margin: 3px;
+}
+
+
+.box button {
+  width: 150px;
+  display: inline-block;
+  height: 30px;
+}
+
+
+.box input{
+    width:50%;
+    height: 30px;
+}
+
+#errors{
+  color: red;
+  margin-left: 100px;
+}

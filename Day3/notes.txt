@@ -1,0 +1,8 @@
+npm i -g create-react-app
+
+-------------------------------
+create-react-app step1-helloworld
+
+-----
+if we want to change port - find react-script in node module 
+find scripts->start.json file - and change the port number

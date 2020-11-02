@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function composition(fun1, fun2) {
+        return function (num) {
+          return fun1(fun2(num));
+        };
+      }
+
+      function firstfun(num) {
+        return num + num;
+      }
+
+      function secondfun(num) {
+        return num * num;
+      }
+
+      var comp = composition(firstfun, secondfun)(5);
+      console.log(comp);
+
+      let hero = {
+        title: "Bruce",
+      };
+
+      function addPower(pow) {
+        return function (person) {
+          return {
+            title: person.title,
+            power: pow,
+          };
+        };
+      }
+
+      // let commonman = addPower(5);
+      // console.log(commonman(hero));//
+
+
+      //we transformed hero by adding new property power - same way we work with HOC
+      hero = addPower(5)(hero);
+      console.log(hero);
+    </script>
+  </head>
+  <body></body>
+</html>

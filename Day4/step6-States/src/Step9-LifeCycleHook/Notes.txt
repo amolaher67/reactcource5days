@@ -1,0 +1,7 @@
+DOM Lifecycle for normal DOM
+
+attach
+update
+detach
+
+

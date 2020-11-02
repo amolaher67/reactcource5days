@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+<script>
+    // let elm=React.createElement("button",null,"Click Me");
+
+    let elm= React.createElement("ul",null,[
+
+     React.createElement("li",{key:1},"List Item1"),
+     React.createElement("li",{key:2},"List Item2"),
+     React.createElement("li",{key:3},"List Item2"),
+     React.createElement("li",{key:4},"List Item2")
+
+
+    ]);
+    window.onload=function()
+    {
+        ReactDOM.render(elm,document.getElementById("root"));
+    }
+</script>
+
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+

@@ -1,0 +1,25 @@
+padding  - inner space
+marginr - outer space
+
+
+position - by default dic ek ke niche ek ata hain
+
+relative -  jithe ahe ti position pakdto -  relative div content div chya baher nai janar
+absolute - absolute ne adhichya tag chi jaga sodat nai ekach thikavun sgle start hota
+
+z-index - jyachi zindex jast to disel , jevha ekavar ek asel sgle controls tar
+
+flaot = div je eka khali ek yeta to eka samor ek yeil and left and right la lau shkto
+
+display - 
+
+inline - eka chya pudhe ekd pahije asel tr but jevvdi with and height lgty tvdch gheil
+
+block - ek line madhe pan but take space 
+
+inline-block - purn height and jevdi width lagel tevdi gheil
+
+
+flex
+justify-content
+
